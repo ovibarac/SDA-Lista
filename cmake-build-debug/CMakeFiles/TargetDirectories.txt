@@ -1,0 +1,3 @@
+D:/Projects/C++ projects/VS 2022/SDA/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Projects/C++ projects/VS 2022/SDA/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir
+D:/Projects/C++ projects/VS 2022/SDA/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/edit_cache.dir
