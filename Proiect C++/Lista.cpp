@@ -61,7 +61,7 @@ TElem Lista::element(IteratorLP poz) const {
 
 TElem Lista::sterge(IteratorLP &poz) {
     //Θ(n)
-    if(poz.valid() && n_prim == n_ultim){
+    if(poz.curent == n_prim && n_prim == n_ultim){
         TElem p = poz.curent->elem();
         delete poz.curent;
         n_prim = nullptr;
