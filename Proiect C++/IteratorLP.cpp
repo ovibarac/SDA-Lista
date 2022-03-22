@@ -3,25 +3,36 @@
 #include <exception>
 
 IteratorLP::IteratorLP(const Lista& l):lista(l) {
-	/* de adaugat */
+    //Θ(1)
+    curent = lista.n_prim;
 }
 
 void IteratorLP::prim(){
-	/* de adaugat */
+    //Θ(1)
+	curent = lista.n_prim;
 }
 
 void IteratorLP::urmator(){
-	/* de adaugat */
+    //Θ(1)
+    if(valid())
+	    curent = curent->urmator();
+    else
+        throw std::exception();
 }
 
 bool IteratorLP::valid() const{
-	/* de adaugat */
+    //Θ(1)
+	if(curent != nullptr)
+        return true;
 	return false;
 }
 
 TElem IteratorLP::element() const{
-	/* de adaugat */
-	return -1;
+    //Θ(1)
+	if(valid()){
+        return curent->elem();
+    }
+    throw std::exception();
 }
 
 

@@ -1,7 +1,20 @@
 # ninja log v5
-14	508	6696400363454886	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/IteratorLP.cpp.obj	15bdf2e7334c462c
-76	693	6696400365312689	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestScurt.cpp.obj	a2368e1b62f96a8a
-60	694	6696400365322699	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
-0	757	6696400365933268	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/App.cpp.obj	5930d480f8531937
-36	769	6696400366063363	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/Lista.cpp.obj	495db9bd6b917ece
-769	1083	6696400369175537	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+19	480	6696808781329121	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/Lista.cpp.obj	495db9bd6b917ece
+4	152	6696808778046036	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/IteratorLP.cpp.obj	15bdf2e7334c462c
+31	225	6696807994706515	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestScurt.cpp.obj	a2368e1b62f96a8a
+3	171	6696818993306490	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
+171	315	6696818994697756	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+3	544	6696807997919448	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/App.cpp.obj	5930d480f8531937
+3	170	6696825139911151	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
+171	319	6696825141342456	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+3	203	6696825250962147	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
+204	426	6696825253084078	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+3	475	6696825916154918	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/Lista.cpp.obj	495db9bd6b917ece
+475	622	6696825917566198	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+3	475	6696826431093245	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/Lista.cpp.obj	495db9bd6b917ece
+475	624	6696826432534554	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+18	174	6696826873317763	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
+3	508	6696826876660810	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Proiect_C++/Lista.cpp.obj	495db9bd6b917ece
+508	692	6696826878432408	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685
+3	157	6696826955832807	CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir/Teste/TestExtins.cpp.obj	2601d73c7fc52e76
+158	313	6696826957334174	TAD_Lista_cu_pozitie_iterator.exe	5568206fa7adb685

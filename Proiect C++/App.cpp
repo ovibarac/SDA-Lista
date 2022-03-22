@@ -1,11 +1,11 @@
 #include <iostream>
 
 
-//#include "TestScurt.h"
-//#include "TestExtins.h"
+#include "TestScurt.h"
+#include "TestExtins.h"
 
 int main(){
 //    testAll();
-//    testAllExtins();
+    testAllExtins();
     std::cout<<"Finished LP Tests!"<<std::endl;
 }
