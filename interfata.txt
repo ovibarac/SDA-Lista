@@ -18,7 +18,6 @@ class Lista{
 		// prima pozitie din lista
 		IteratorLP prim() const;
 
-
 		// returnare element de pe pozitia curenta
 		//arunca exceptie daca poz nu e valid
 		TElem element(IteratorLP poz) const;
