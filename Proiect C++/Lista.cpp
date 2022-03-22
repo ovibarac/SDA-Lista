@@ -6,19 +6,40 @@
 
 #include <iostream>
 
+TElem Node::elem() {
+    return this->val;
+}
+
+PNod Node::urmator(){
+    return this->urm;
+}
+
+Node::Node(TElem val, PNod urmator) {
+    this->val = val;
+    this->urm = urmator;
+}
+
 Lista::Lista() {
-	/* de adaugat */
+    //Θ(1)
+	n_prim = nullptr;
 }
 
 int Lista::dim() const {
-	/* de adaugat */
-	return 0;
+    //Θ(n)
+    int nr = 0;
+    PNod p = n_prim;
+    while (p != nullptr) {
+        p = p->urm;
+        nr++;
+    }
+	return nr;
 }
 
 
 bool Lista::vida() const {
-	/* de adaugat */
-	return true;
+	if(n_prim == nullptr)
+	    return true;
+    return false;
 }
 
 IteratorLP Lista::prim() const {
@@ -51,13 +72,32 @@ void Lista::adauga(IteratorLP& poz, TElem e) {
 }
 
 void Lista::adaugaInceput(TElem e) {
-	/* de adaugat */
+    //Θ(1)
+    PNod p = new Node(e,n_prim);
+
+    if(n_prim== nullptr){
+        n_ultim = p;
+    }
+
+    n_prim = p;
 }
 
 void Lista::adaugaSfarsit(TElem e) {
-	/* de adaugat */
+    //Θ(1)
+    PNod p = new Node(e, nullptr);
+    if(n_ultim != nullptr){
+        n_ultim->urm = p;
+    }else{
+        n_prim = p;
+    }
+    n_ultim = p;
 }
 
 Lista::~Lista() {
-	/* de adaugat */
+    //Θ(n)
+    while (n_prim != nullptr) {
+        PNod p = n_prim;
+        n_prim = n_prim->urm;
+        delete p;
+    }
 }

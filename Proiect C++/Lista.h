@@ -3,11 +3,38 @@
 typedef int TElem;
 
 class IteratorLP;
+class Node;
+
+typedef Node *PNod;
+
+class Node{
+private:
+    //valoarea nodului
+    TElem val;
+
+    //adresa nodului urmator
+    PNod urm;
+public:
+    friend class Lista;
+    //constructor
+    Node(TElem val, PNod urmator);
+
+    TElem elem();
+
+    PNod urmator();
+};
 
 class Lista {
 private:
 	friend class IteratorLP;
 	/* aici e reprezentarea */
+
+    //primul nod
+    PNod n_prim;
+
+    //ultimul nod
+    PNod n_ultim;
+
 public:
 
 		// constructor
