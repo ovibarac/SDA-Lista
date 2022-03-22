@@ -61,33 +61,54 @@ TElem Lista::element(IteratorLP poz) const {
 
 TElem Lista::sterge(IteratorLP &poz) {
     //Θ(n)
-//    if(poz.curent == n_prim){
-//        n_prim = poz.curent->urm;
-//        PNod p = poz.curent;
-//        delete poz.curent;
-//        return p->elem();
-//    }
-//    if (poz.valid()) {
-//        IteratorLP it = IteratorLP(*this);
-//        while(it.curent != nullptr && it.valid()){
-//            if(it.curent->urm == poz.curent){
-//                it.curent->urm = poz.curent->urm;
-//                PNod p = poz.curent;
-//                delete poz.curent;
-//                return p->elem();
-//            }
-//            it.urmator();
-//        }
-//    }
-//
-    return -1;
+    if(poz.valid() && n_prim == n_ultim){
+        TElem p = poz.curent->elem();
+        delete poz.curent;
+        n_prim = nullptr;
+        n_ultim = nullptr;
+        poz.curent = nullptr;
+        return p;
+    }else if (poz.curent == n_prim) {
+        n_prim = poz.curent->urm;
+        TElem p = poz.curent->elem();
+        delete poz.curent;
+        poz.curent = n_prim;
+        return p;
+    }else if (poz.curent == n_ultim) {
+        IteratorLP it = IteratorLP(*this);
+        while (it.valid()) {
+            if (it.curent->urm == poz.curent) {
+                it.curent->urm = nullptr;
+                n_ultim = it.curent;
+                TElem p = poz.curent->elem();
+                delete poz.curent;
+                poz.curent = nullptr;
+                return p;
+            }
+            it.urmator();
+        }
+    }else if (poz.valid()) {
+        IteratorLP it = IteratorLP(*this);
+        while (it.valid()) {
+            if (it.curent->urm == poz.curent) {
+                it.curent->urm = poz.curent->urm;
+                TElem p = poz.curent->elem();
+                delete poz.curent;
+                poz.curent = it.curent->urm;
+                return p;
+            }
+            it.urmator();
+        }
+    }else{
+        throw std::exception();
+    }
 }
 
 IteratorLP Lista::cauta(TElem e) const {
     //Θ(n)
     IteratorLP it = IteratorLP(*this);
-    while(it.valid()){
-        if(it.curent->elem() == e){
+    while (it.valid()) {
+        if (it.curent->elem() == e) {
             return it;
         }
         it.urmator();
@@ -98,22 +119,22 @@ IteratorLP Lista::cauta(TElem e) const {
 
 TElem Lista::modifica(IteratorLP poz, TElem e) {
     //Θ(1)
-    if(poz.valid()){
+    if (poz.valid()) {
         TElem p = poz.curent->val;
         poz.curent->val = e;
         return p;
-    }
-    else
+    } else
         throw std::exception();
 }
 
 void Lista::adauga(IteratorLP &poz, TElem e) {
     //Θ(1)
-    if(poz.valid()){
+    if (poz.valid()) {
         PNod p = new Node(e, nullptr);
         p->urm = poz.curent->urm;
         poz.curent->urm = p;
-    }else
+        poz.urmator();
+    } else
         throw std::exception();
 }
 

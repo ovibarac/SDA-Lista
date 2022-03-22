@@ -73,26 +73,26 @@ void testAllExtins() {
     IteratorLP it3_3 = lista.cauta(51);
     lista.adauga(it3_3, 150);
     assert(it3_3.element() == 150);
-//
-//    IteratorLP it5 = lista.cauta(51);
-//    lista.modifica(it5, 50);
-//    assert(lista.element(it5) == 50);
-//    TElem vechi_2 = lista.sterge(it3_3); //stergem elementul de la it3_3
-//    assert(vechi_2 == 150);
-//
-//    //verificam ca nu se poate modifica/sterge la o pozitie invalida
-//    try {
-//        lista.modifica(it, 0);
-//        assert(false);
-//    } catch (exception&) {
-//        assert(true);
-//    }
-//    try {
-//        lista.sterge(it);
-//        assert(false);
-//    } catch (exception&) {
-//        assert(true);
-//    }
+
+    IteratorLP it5 = lista.cauta(51);
+    lista.modifica(it5, 50);
+    assert(lista.element(it5) == 50);
+    TElem vechi_2 = lista.sterge(it3_3); //stergem elementul de la it3_3
+    assert(vechi_2 == 150);
+
+    //verificam ca nu se poate modifica/sterge la o pozitie invalida
+    try {
+        lista.modifica(it, 0);
+        assert(false);
+    } catch (exception&) {
+        assert(true);
+    }
+    try {
+        lista.sterge(it);
+        assert(false);
+    } catch (exception&) {
+        assert(true);
+    }
 }
 
 

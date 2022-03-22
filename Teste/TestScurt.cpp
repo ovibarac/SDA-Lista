@@ -28,12 +28,12 @@ void testAll(){
     it.prim();
     assert(it.valid());
     assert(it.element() == 1);
-//    TElem p = lista.sterge(it);
-//
-//    assert(lista.sterge(it) == 1);
+
+    TElem p = lista.sterge(it);
+    assert(lista.sterge(it) == 1);
 //    assert(lista.dim() == 0);
 //    assert(lista.vida());
-
+//
 //    lista.adaugaInceput(1);
 //    assert(lista.dim() == 1);
 //    assert(!lista.vida());
