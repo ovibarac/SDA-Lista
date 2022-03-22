@@ -22,9 +22,7 @@ void IteratorLP::urmator(){
 
 bool IteratorLP::valid() const{
     //Θ(1)
-	if(curent != nullptr)
-        return true;
-	return false;
+	return curent != nullptr;
 }
 
 TElem IteratorLP::element() const{

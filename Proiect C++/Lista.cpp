@@ -42,9 +42,7 @@ int Lista::dim() const {
 
 bool Lista::vida() const {
     //Θ(1)
-    if (n_prim == nullptr)
-        return true;
-    return false;
+    return n_prim == nullptr;
 }
 
 IteratorLP Lista::prim() const {
@@ -88,14 +86,14 @@ TElem Lista::sterge(IteratorLP &poz) {
 IteratorLP Lista::cauta(TElem e) const {
     //Θ(n)
     IteratorLP it = IteratorLP(*this);
-    while(it.curent != nullptr && it.valid()){
+    while(it.valid()){
         if(it.curent->elem() == e){
             return it;
         }
         it.urmator();
     }
-
-    return IteratorLP(*this);
+    it.curent = nullptr;
+    return it;
 }
 
 TElem Lista::modifica(IteratorLP poz, TElem e) {
